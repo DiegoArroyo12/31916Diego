@@ -13,3 +13,20 @@ body{
     justify-content: center;
     align-content: center;
 }
+
+.main{
+    position: relative;
+    width: 800px;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid #09ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
