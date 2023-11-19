@@ -27,6 +27,9 @@ session_start();
 
 <body>
     <h1 class="title">Registro</h1>
+    <br>
+    <br>
+    <br>
     <div class="main">
         <form action="submit_registro.php" method="post" class="form">
             <!--Nombre-->
