@@ -10,7 +10,6 @@ session_start();
 </head>
 
 <script>
-
     function valida(e){
         tecla = (document.all) ? e.keyCode : e.which;
         //Tecla de retroceso para borrar, siempre la permite

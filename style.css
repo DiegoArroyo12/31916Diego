@@ -26,6 +26,7 @@ body{
 
 .main_1{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -116,7 +117,7 @@ a{
     border: none;
     outline: none;
     width: 220px;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 10px 0;
     font-size: 22px;
     border-radius: 40px;
@@ -127,4 +128,25 @@ a{
 
 .answer{
     text-align: center;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    background: linear-gradient(45deg, #0ef, #c800ff); /* Color de fondo de la tabla */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    margin-top: 20px;
+}
+
+th, td{
+    border: 1px solid #ddd; /* Borde de las celdas */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación del texto en las celdas */
+    text-align: center; /* Alineación central del texto en las celdas */
+    padding: 12px; /* Espaciado interno mayor en las celdas */
+}
+
+th{
+    background: #091b29;
 }
