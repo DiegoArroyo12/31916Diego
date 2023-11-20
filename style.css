@@ -150,3 +150,13 @@ th, td{
 th{
     background: #091b29;
 }
+
+.confirm{
+    background-color: red;
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    font-size: 20px;
+}
