@@ -137,6 +137,7 @@ a{
     color: white; /* Color del texto */
     font-family: Arial, sans-serif; /* Tipo de fuente */
     margin-top: 20px;
+    box-shadow: 0 0 50px 0 #00a6bc;
 }
 
 th, td{
