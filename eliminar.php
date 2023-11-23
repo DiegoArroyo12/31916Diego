@@ -3,23 +3,6 @@
 include "conexion.php";
 mysqli_set_charset($conexion,'utf8');
 
-if(isset($_POST['eliminar']) && isset($_POST['id_a_eliminar'])){ 
-    $id_a_eliminar = $_POST['id_a_eliminar']; 
-
-    // Verificar si se ha confirmado la eliminación
-    if(isset($_POST['confirmacion']) && $_POST['confirmacion'] === 'SI'){ 
-        $consulta_eliminar = "DELETE FROM usuarios WHERE id = $id_a_eliminar";
-
-        if(mysqli_query($conexion, $consulta_eliminar)){
-            echo "Registro eliminado exitosamente";
-        } else {
-            echo "Error al intentar eliminar el registro: " . mysqli_error($conexion);
-        }
-    } else {
-        echo "Debes confirmar la eliminación";
-    }
-}
-
 $query_mostrar = "SELECT id, nombre, nombre_usuario, correo FROM usuarios";
 $resultado = mysqli_query($conexion, $query_mostrar);
 
@@ -44,8 +27,9 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
     echo "<td>" . $fila['nombre_usuario'] . "</td>";
     echo "<td>" . $fila['correo'] . "</td>";
     echo "<td>";
-    echo "<form method='post' onsubmit='return confirmarEliminacion()'>";
+    echo "<form method='post'>";
     echo "<input type='hidden' name='id_a_eliminar' value='" . $fila['id'] . "'>";
+    echo "<input type='hidden' name='confirmacion' value='SI'>"; 
     echo "<input class='confirm' type='submit' name='eliminar' value='Eliminar'>";
     echo "</form>";
     echo "</td>";
@@ -56,6 +40,18 @@ echo "</table>";
 echo "</div>";
 echo "</body>";
 echo "</html>";
+
+if (isset($_POST['eliminar'])) { 
+    $id_a_eliminar = $_POST['id_a_eliminar']; 
+
+    $consulta_eliminar = "DELETE FROM usuarios WHERE id = $id_a_eliminar";
+
+    if (mysqli_query($conexion, $consulta_eliminar)) {
+        echo "Registro Eliminado Exitosamente";
+    } else {
+        echo "Error al intentar eliminar el registro: " . mysqli_error($conexion);
+    }
+}
 
 mysqli_close($conexion);
 ?>
