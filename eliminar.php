@@ -41,15 +41,25 @@ echo "</div>";
 echo "</body>";
 echo "</html>";
 
-if (isset($_POST['eliminar'])) { 
-    $id_a_eliminar = $_POST['id_a_eliminar']; 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirmacion'])) {
+    // El formulario de confirmación ha sido enviado
 
-    $consulta_eliminar = "DELETE FROM usuarios WHERE id = $id_a_eliminar";
+    // Verificar si se ha confirmado la eliminación
+    if ($_POST['confirmacion'] === 'SI') {
+        // Procesar la eliminación
+        if (isset($_POST['eliminar'])) { 
+            $id_a_eliminar = $_POST['id_a_eliminar']; 
 
-    if (mysqli_query($conexion, $consulta_eliminar)) {
-        echo "Registro Eliminado Exitosamente";
+            $consulta_eliminar = "DELETE FROM usuarios WHERE id = $id_a_eliminar";
+
+            if (mysqli_query($conexion, $consulta_eliminar)) {
+                echo "<div style='font-size: 20px; text-align: center;'><b>Registro Eliminado Exitosamente<b></div>";
+            } else {
+                echo "<div style='font-size: 20px; text-align: center;'><b>Error al intentar eliminar el registro: . mysqli_error($conexion)<b></div>";
+            }
+        }
     } else {
-        echo "Error al intentar eliminar el registro: " . mysqli_error($conexion);
+        echo "<div style='font-size: 20px; text-align: center;'><b>Debes Confirmar La Selección<b></div>";
     }
 }
 
