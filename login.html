@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="login_style.css">
 </head>
 <body>
-<form action="actualizar.php" method="post">
-    <div class=ventana>
-        <br>
-        <label for="">Usuario</label>
-        <br><br>
-        <input name="nombre_usuario" type="text" placeholder="Ingresa Usuario" required class="tamaño">
-        <br><br>
-        <label for="">Contraseña</label>
-        <br><br>
-        <input name="password" type="password" required  placeholder="Ingresa Contraseña" class="tamaño">
-        <br><br>
-        <button>Iniciar Sesión</button> <br> <br>
-        <br>
+    <div class="ventana">
+        <form action="" class="form">
+            <h1 class="title"><b>Inicio</b></h1>
+            <div class="inp">
+                <input type="text" class="input" placeholder="Usuario">
+            </div>
+            <div class="inp">
+                <input type="password" class="input" placeholder="Contraseña">
+            </div>
+            <button class="submit">Iniciar Sesión</button>
+            <button class="submit"><a href="index.html">Regresar</a></button>
+        </form>
+
+        <div></div>
+        <div class="banner">
+            <h1 class="text">ACTUALIZACIÓN<br/>DE DATOS</h1>
+        </div>
     </div>
-</form>
 </body>
 </html>
