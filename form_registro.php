@@ -33,38 +33,27 @@ session_start();
         <form action="submit_registro.php" method="post" class="form">
             <!--Nombre-->
             <div class="form-group">
-                <label class="text_label" for="nombre">Nombre Completo:</label><br>
-                <input class="inputs" type="text" name="usuario" maxlength="255"  required>
-                <br/><br/>
+                <input class="inputs" type="text" name="usuario" maxlength="255"  placeholder="Nombre Completo" required>
             </div>
             <!-- Dirección -->
             <div class="form-group">
-                <label class="text_label" for="direcion">Dirección:</label><br>
-                <input class="inputs" type="text" name="direccion" maxlength="255" required>
-                <br/><br/>
+                <input class="inputs" type="text" name="direccion" maxlength="255" placeholder="Dirección" required>
             </div>
             <!-- Telefono -->
             <div class="form-group">
-                <label class="text_label" for="telefono">Teléfono:</label><br>
-                <input class="inputs" type="text" onkeypress="return valida(event)" name="telefono" maxlength="15" required>
-                <br/><br/>
+                <input class="inputs" type="text" onkeypress="return valida(event)" name="telefono" maxlength="15" placeholder="Teléfono" required>
             </div>
             <!-- Email -->
             <div class="form-group">
-                <label class="text_label" for="correo">Email:</label><br>
-                <input class="inputs" type="email" name="correo" maxlength="35" required>
-                <br/><br/>
+                <input class="inputs" type="email" name="correo" maxlength="35" placeholder="Correo" required>
             </div>
             <!--Nombre_usuario-->
             <div class="form-group">
-                <label class="text_label" for="nombre">Nombre Usuario:</label><br>
-                <input class="inputs" type="text" name="nombre_usuario" maxlength="255"  required>
-                <br/><br/>
+                <input class="inputs" type="text" name="nombre_usuario" maxlength="255" placeholder="Usuario" equired>
             </div>
             <!--Password-->
             <div class="form-group">
-                <label class="text_label" for="pass">Contraseña:</label><br>
-                <input class="inputs" type="password" name="password" maxlength="8" required>
+                <input class="inputs" type="password" name="password" maxlength="8" placeholder="Contraseña" required>
             </div>
 
             <div></div>

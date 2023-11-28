@@ -44,6 +44,22 @@ body{
     align-items: center;
 }
 
+.form-group {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;   
+}
+
+.inputs {
+    border: none;
+    outline: none;
+    background: none;
+    width: 260px;
+    margin-top: 5px;
+    padding-right: 5px;
+    font-size: 17px;
+    color: #0ef;
+}
+
 a{
     text-decoration: none;
 }
@@ -90,14 +106,9 @@ a{
     background: #091b29;
 }
 
-.inputs{
-    font-size: 15px;
-    color: #091b29;
-}
-
 .text_label{
     font-size: 20px;   
-    color: #0ef;
+    color: #fff;
 }
 
 .return{
