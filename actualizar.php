@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $consulta_verificacion = "SELECT * FROM usuarios WHERE nombre_usuario='$usuario' AND password='$password'";
     $resultado = mysqli_query($conexion, $consulta_verificacion);
 
-
     // Verificar si hay resultados y mostrarlos en una tabla HTML
     if ($resultado && mysqli_num_rows($resultado) > 0) {
         echo "<!DOCTYPE html>";
@@ -19,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<meta charset='UTF-8'>";
         echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
         echo "<title>Leer</title>";
-        echo "<link rel='stylesheet' href='style.css'>";
+        echo "<link rel='stylesheet' href='update.css'>";
         echo "</head>";
         echo "<script>";
         echo "function valida(e){";
@@ -31,25 +30,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "return patron.test(tecla_final);}";
         echo "</script>";
         echo "<body>";
-        echo "<div class='main_1'>";
-        echo "<button class='back'><a href='login.html'>Volver al Inicio</a></button>";
-        echo "<table class='table' border='1'>";
-        echo "<tr><th>Nombre</th><th>Dirección</th><th>Teléfono</th><th>Email</th><th>Usuario</th><th>Contraseña</th><th>ID</th></tr>";
-
+        echo "<div class='main'>";
         while ($fila = mysqli_fetch_assoc($resultado)) {
-            echo "<tr>";
-            echo "<td><input type='text' class='inputs' name='usuario' maxlength='255' value='" . $fila['nombre'] . "' required></td>";
-            echo "<td><input type='text' class='inputs' name='direccion' maxlength='255' value='" . $fila['direccion'] . "' required></td>";
-            echo "<td><input type='text' class='inputs' onkeypress='return valida(event)' name='telefono' maxlength='15' value='" . $fila['telefono'] . "' required></td>";
-            echo "<td><input type='email' class='inputs' name='email' maxlength='40' value='" . $fila['correo'] . "' required></td>";
-            echo "<td><input type='text' class='inputs' name='nombre_usuario' maxlength='255' value='" . $fila['nombre_usuario'] . "' required></td>";
-            echo "<td><input type='text' class='inputs' name='password' maxlength='8' value='" . $fila['password'] . "' required></td>";
-            echo "<td><input type='text' class='inputs' onkeypress='return valida(event)' name='id' maxlength='255' value='" . $fila['id'] . "' required></td>";
-            echo "</tr>";
-        }        
-
-        echo "</table>";
-        echo "<button type=submit class='submit'>ACTUALIZAR</button>";
+            echo "<div class='inp_1'>";
+            echo "<label class='label'>Nombre Completo:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' name='nombre' maxlength='255' value='" . $fila['nombre'] . "' required>";
+            echo "</div>";
+            echo "<label class='label'>Dirección:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' name='direccion' maxlength='255' value='" . $fila['direccion'] . "' required>";
+            echo "</div>";
+            echo "<label class='label'>Teléfono:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' onkeypress='return valida(event)' name='telefono' maxlength='15' value='" . $fila['telefono'] . "' required>";
+            echo "</div>";
+            echo "<label class='label'>Correo:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='email' class='input' name='email' maxlength='40' value='" . $fila['correo'] . "' required>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div class='inp_1'>";
+            echo "<label class='label'>Usuario:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' name='nombre_usuario' maxlength='255' value='" . $fila['nombre_usuario'] . "' required>";
+            echo "</div>";
+            echo "<label class='label'>Contraseña:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' name='password' maxlength='8' value='" . $fila['password'] . "' required>";
+            echo "</div>";
+            echo "<label class='label'>ID:</label>";
+            echo "<div class='inp'>";
+            echo "<input type='text' class='input' onkeypress='return valida(event)' name='id' maxlength='255' value='" . $fila['id'] . "' required>";
+            echo "</div>";
+            echo "<button type=submit class='button'>ACTUALIZAR</button>";
+            echo "<button class='button'><a href='login.html'>Cerrar Sesión</a></button>";
+            echo "</div>";
+        }
         echo "</div>";
         echo "</body>";
         echo "</html>";
