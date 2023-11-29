@@ -30,12 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "return patron.test(tecla_final);}";
         echo "</script>";
         echo "<body>";
-        echo "<div class='main'>";
+        echo "<form action='submit_registro.php' method='post' class='main'>";
         while ($fila = mysqli_fetch_assoc($resultado)) {
             echo "<div class='inp_1'>";
             echo "<label class='label'>Nombre Completo:</label>";
             echo "<div class='inp'>";
-            echo "<input type='text' class='input' name='nombre' maxlength='255' value='" . $fila['nombre'] . "' required>";
+            echo "<input type='text' class='input' name='usuario' maxlength='255' value='" . $fila['nombre'] . "' required>";
             echo "</div>";
             echo "<label class='label'>Dirección:</label>";
             echo "<div class='inp'>";
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "</div>";
             echo "<label class='label'>Correo:</label>";
             echo "<div class='inp'>";
-            echo "<input type='email' class='input' name='email' maxlength='40' value='" . $fila['correo'] . "' required>";
+            echo "<input type='email' class='input' name='correo' maxlength='40' value='" . $fila['correo'] . "' required>";
             echo "</div>";
             echo "</div>";
             echo "<div class='inp_1'>";
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<button class='button'><a href='login.html'>Cerrar Sesión</a></button>";
             echo "</div>";
         }
-        echo "</div>";
+        echo "</form>";
         echo "</body>";
         echo "</html>";
     } else {

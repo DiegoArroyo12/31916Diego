@@ -33,27 +33,38 @@ session_start();
         <form action="submit_registro.php" method="post" class="form">
             <!--Nombre-->
             <div class="form-group">
-                <input class="inputs" type="text" name="usuario" maxlength="255"  placeholder="Nombre Completo" required>
+                <input class="inputs" type="text" name="usuario" maxlength="255" required>
+                <label class="labels" for="usuario">Nombre Completo</label>
             </div>
+            <br>
             <!-- Dirección -->
             <div class="form-group">
-                <input class="inputs" type="text" name="direccion" maxlength="255" placeholder="Dirección" required>
+                <input class="inputs" type="text" name="direccion" maxlength="255" required>
+                <label class="labels" for="direccion">Dirección</label>
             </div>
+            <br>
             <!-- Telefono -->
             <div class="form-group">
-                <input class="inputs" type="text" onkeypress="return valida(event)" name="telefono" maxlength="15" placeholder="Teléfono" required>
+                <input class="inputs" type="text" onkeypress="return valida(event)" name="telefono" maxlength="15" required>
+                <label class="labels" for="telefono">Teléfono</label>
             </div>
+            <br>
             <!-- Email -->
             <div class="form-group">
-                <input class="inputs" type="email" name="correo" maxlength="35" placeholder="Correo" required>
+                <input class="inputs" type="email" name="correo" maxlength="35" required>
+                <label class="labels" for="correo">Correo</label>
             </div>
+            <br>
             <!--Nombre_usuario-->
             <div class="form-group">
-                <input class="inputs" type="text" name="nombre_usuario" maxlength="255" placeholder="Usuario" equired>
+                <input class="inputs" type="text" name="nombre_usuario" maxlength="255" required>
+                <label class="labels" for="nombre_usuario">Usuario</label>
             </div>
+            <br>
             <!--Password-->
             <div class="form-group">
-                <input class="inputs" type="password" name="password" maxlength="8" placeholder="Contraseña" required>
+                <input class="inputs" type="password" name="password" maxlength="8" required>
+                <label class="labels" for="password">Contraseña</label>
             </div>
 
             <div></div>
