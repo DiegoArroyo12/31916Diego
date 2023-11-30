@@ -59,10 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<div class='inp'>";
             echo "<input type='text' class='input' name='password' maxlength='8' value='" . $fila['password'] . "' required>";
             echo "</div>";
-            echo "<label class='label'>ID:</label>";
-            echo "<div class='inp'>";
-            echo "<input type='text' class='input' onkeypress='return valida(event)' name='id' maxlength='255' value='" . $fila['id'] . "' required>";
-            echo "</div>";
             echo "<button type=submit class='button'>ACTUALIZAR</button>";
             echo "<button class='button'><a href='login.html'>Cerrar Sesión</a></button>";
             echo "</div>";

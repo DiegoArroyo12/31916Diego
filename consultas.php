@@ -43,7 +43,24 @@ if ($resultado && mysqli_num_rows($resultado) > 0) {
     echo "</body>";
     echo "</html>";
 } else {
-    echo "No se encontraron resultados.";
+    echo "<!DOCTYPE html>";
+        echo "<html lang='en'>";
+        echo "<head>";
+        echo "<meta charset='UTF-8'>";
+        echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<title>Exito</title>";
+        echo "<link rel='stylesheet' href='style.css'>";
+        echo "</head>";
+        echo "<body>";
+        echo "<div class='main_1'>";
+        echo "<div class='answer'>";
+        echo "<h1 class='title'>No Se Encontraron Resultados</h1>";
+        echo "<br>";
+        echo "<button class='back'><a href='index.html'>Volver al Inicio</a></button>";
+        echo "</div>";
+        echo "</div>";
+        echo "</body>";
+        echo "</html>";
 }
 
 // Cerrar la conexión a la base de datos (si es necesario)
