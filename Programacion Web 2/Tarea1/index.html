@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hecho por Diego Arroyo Palacios">
+    <link rel="stylesheet" href="style.css">
+    <title>Índice de Masa Corporal</title>
+</head>
+<body>
+    <div class="principal">
+        <section class="contenedor">
+            <h1 class="titulo">Índice de Masa Corporal</h1>
+            <h3 class="descripcion">Conoce tu IMC</h3>
+        </section>
+
+        <section class="contenedor secundario sombra">
+            <!-- Mensaje Final -->
+            <div>
+                <h1 class="mensaje" style="display: none; color: #ffffff;"></h1>
+            </div>
+
+            <!-- Columna1 -->
+            <div class="columna1 contenido">
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+                <label class="etiqueta">Ingresa tu peso en kg: <span id="rangePeso">30</span></label>
+                <input type="range" id="peso" min="30" max="100" value="30" step="1" oninput="document.getElementById('rangePeso').textContent = value">
+            </div>
+            
+            <!-- Columna 2 -->
+            <div class="columna2 contenido">
+                <input type="text" id="edad" placeholder="Ingresa tu edad">
+                <label class="etiqueta">Ingresa tu estatura en metros: <span id="rangeEstatura">1</span></label>
+                <input type="range" id="estatura" min="1" max="2.0" value="1" step="0.1" oninput="document.getElementById('rangeEstatura').textContent = value">
+            </div>
+        </section>
+
+        <button onclick=IMC() class="calcular contenido" id="calcular">Calcular</button>
+        <button onclick=volver() class="calcular" id="volver" style="display: none;">Calcular Nuevo</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
