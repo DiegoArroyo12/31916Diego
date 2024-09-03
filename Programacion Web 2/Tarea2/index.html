@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adivina el Número</title>
+</head>
+<body>
+    <h1>Adivina El Número</h1>
+    <div class="contenedor separador">
+        <!-- Input Nombre Usuario -->
+        <input type="text" placeholder="Ingresa tu nombre de usuario" id="usuario">
+        <!-- Instrucciones -->
+        <h3 class="subtitulo" id="subtitulo"></h3>
+        <!-- Control de Intentos y Fin de Juego -->
+        <h3 class="subtitulo" id="finJuego">Tienes <span id="intentos">5</span> intentos</h3>
+        <h3 class="subtitulo" style="display: none;" id="resultado"></h3>
+        <h3 class="subtitulo" style="display: none;" id="respuesta"></h3>
+        <!-- Input Número del Usuario -->
+        <input type="number" placeholder="Ingresa un número" id="respuestaUsuario">
+        <!-- Ayuda al Usuario -->
+        <p class="ayuda" style="display: none;" id="ayuda"></p>
+        <!-- Botones -->
+        <div class="separador">
+            <button onclick="Volver()">Volver a Menú Principal</button>
+            <button onclick="getRespuestaUsuario()">Confirmar</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
