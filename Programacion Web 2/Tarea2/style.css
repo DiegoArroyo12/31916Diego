@@ -58,6 +58,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .contenedor {

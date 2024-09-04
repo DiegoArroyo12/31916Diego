@@ -73,4 +73,5 @@ button {
     border-radius: 4rem;
     font-size: 2rem;
     padding: 1rem;
+    color: var(--blanco);
 }

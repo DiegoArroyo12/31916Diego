@@ -12,19 +12,22 @@
         <!-- Input Nombre Usuario -->
         <input type="text" placeholder="Ingresa tu nombre de usuario" id="usuario">
         <!-- Instrucciones -->
-        <h3 class="subtitulo" id="subtitulo"></h3>
+        <h3 class="subtitulo">Intenta adivinar un número entre 1 y 10</h3>
         <!-- Control de Intentos y Fin de Juego -->
         <h3 class="subtitulo" id="finJuego">Tienes <span id="intentos">5</span> intentos</h3>
         <h3 class="subtitulo" style="display: none;" id="resultado"></h3>
         <h3 class="subtitulo" style="display: none;" id="respuesta"></h3>
         <!-- Input Número del Usuario -->
-        <input type="number" placeholder="Ingresa un número" id="respuestaUsuario">
+        <div>
+            <input type="number" placeholder="Ingresa un número" id="respuestaUsuario">
+            <button onclick="Adivina()">Confirmar</button>
+        </div>
         <!-- Ayuda al Usuario -->
         <p class="ayuda" style="display: none;" id="ayuda"></p>
         <!-- Botones -->
         <div class="separador">
             <button onclick="Volver()">Volver a Menú Principal</button>
-            <button onclick="getRespuestaUsuario()">Confirmar</button>
+            <button onclick="Reiniciar()">Reiniciar Juego</button>
         </div>
     </div>
 </body>
