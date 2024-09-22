@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Tiendita</title>
+</head>
+<body>
+    <h1>Mi Tiendita</h1>
+
+    <div class="contenedor">
+        <!-- Camisa -->
+        <button id="Camisa" value="300">Camisa<span class="span">$300</span></button>
+        <button id="Pantalon" value="500">Pantalón<span class="span">$500</span></button>
+        <button id="Zapatos" value="800">Zapatos<span class="span">$800</span></button>
+        <button id="Sombrero" value="200">Sombrero<span class="span">$200</span></button>
+    </div>
+
+    <div class="contenedor">
+        <button class="buttons" onclick="comprar()">Comprar</button>
+        <button class="buttons" onclick="borrar()">Borrar Carrito</button>
+        <button class="buttons" onclick="window.location.href = '../../index.html';">Menú Principal</button>
+    </div>
+
+    <div>
+        <h1 id="carrito" style="display: none;">Carrito:</h1>
+        <ul id="productos"></ul>
+        <h2 id="total" style="display: none;">Total: $<span id="precio">0</span></h2>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

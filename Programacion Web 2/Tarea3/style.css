@@ -1,0 +1,97 @@
+:root {
+    /* Sección de los colores */
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #474747;
+    --primario: #b0b325;
+
+    /* Sección de fuentes */
+    --principal: 3.8rem;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    color: var(--blanco);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* 1 rem = 10 px */
+    background-image: linear-gradient(to bottom, var(--negro), var(--primario));
+    background-size: cover;
+    height: 100%; /* Hace que el bg-image cubra toda la pantalla */
+    width: 100%; /* Hace que el bg-image cubra toda la pantalla */
+}
+
+h1 {
+    font-size: var(--principal);
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.separador {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contenedor {
+    flex-direction: column;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: #b0b325;
+    border-radius: 4rem;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+.buttons {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--gris);
+    border-radius: 4rem;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+.span {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    font-size: 3rem;
+}
