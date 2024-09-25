@@ -3,7 +3,7 @@
     --blanco: #ffffff;
     --negro: #212121;
     --gris: #474747;
-    --primario: #9a4106;
+    --primario: #b325b3;
 
     /* Sección de fuentes */
     --principal: 3.8rem;
@@ -14,9 +14,9 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Hace que el bg-image cubra toda la pantalla */
+    height: 100%;
     font-size: 62.5%;
-    box-sizing: border-box; /* Hack para Box Model */
+    box-sizing: border-box;
     color: var(--blanco);
 }
 
@@ -38,40 +38,21 @@ body {
 
 h1 {
     font-size: var(--principal);
-    margin: 0;
-}
-
-h2 {
-    font-size: 2.8rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-    margin-top: 0.3rem;
-}
-
-h1, h2, h3 {
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: var(--blanco);
 }
 
 .contenedor {
-    display: flex;
+    flex-direction: column;
     padding: 2rem;
-    gap: 2rem;
+    font-size: 2rem;
 }
 
 button {
     border: none;
     outline: none;
     cursor: pointer;
-    background-image: linear-gradient(to bottom, var(--gris), var(--primario));
+    color: var(--blanco);
+    background-color: var(--primario);
     border-radius: 4rem;
     font-size: 2rem;
-    padding: 1rem;
-    color: var(--blanco);
+    padding: 1.5rem;
 }
