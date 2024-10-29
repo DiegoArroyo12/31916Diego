@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Segunda Página</title>
+</head>
+<body>
+    <h1>Segunda Página en Node</h1>
+    <div class="contenedor">
+        <h1>Saludo</h1>
+        <p>Ingresa tu nombre:</p>
+        <input type="text" id="nombre">
+        <button onclick="saludar()">Saludar</button>
+        <h2 id="saludo" style="display: none;"></h2>
+    </div>
+    <button onclick="window.location.href = '/Tarea5';">Volver</button>
+</body>
+<script>
+    const saludar = () => {
+        let nombre = document.getElementById("nombre");
+        let saludo = document.getElementById("saludo");
+
+        saludo.textContent = `Hola ${nombre.value}`;
+        saludo.style.display = "block";
+    };
+</script>
+</html>
