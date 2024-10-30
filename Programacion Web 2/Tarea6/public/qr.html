@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generador QR</title>
+</head>
+<body>
+    <h1>Generador de Códigos QR</h1>
+    
+    <div class="separador">
+        <div class="form">
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label><input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+            <!-- Correo -->
+            <label for="correo">Correo:</label><input type="text" name="correo" id="correo" placeholder="Ingresa tu correo" required>
+            <!-- Escuela -->
+            <label for="escuela">Selecciona tu escuela:</label><input type="text" name="escuela" id="escuela" list="listaEscuelas" required>
+            <datalist id="listaEscuelas">
+                <option value="UNAM">FES Aragón</option>
+                <option value="IPN">Politécnico</option>
+                <option value="UPN">Panamericana</option>
+            </datalist>
+            <!-- Acceso -->
+            <label for="acceso">Selecciona tu tipo de acceso:</label><input type="text" name="acceso" id="acceso" list="listaAcceso" required>
+            <datalist id="listaAcceso">
+                <option value="Estudiante"></option>
+                <option value="Profesor"></option>
+                <option value="Conserje"></option>
+            </datalist>
+        </div>
+        <div id="qr"><!-- Imagen QR --></div>
+    </div>
+    <div>
+        <button onclick="generarQR()">Generar QR</button>
+        <button onclick="window.location.href = '/qr'">Generar Nuevo QR</button>
+        <button onclick="window.location.href = '/Tarea6'">Volver</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
