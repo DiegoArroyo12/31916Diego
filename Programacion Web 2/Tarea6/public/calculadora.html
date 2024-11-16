@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    
+    <div class="calculadora" >
+        <input class="calcscreen" type="text" id="pantalla" disabled>
+        <div class="botones">
+            <input class="calcbutton" type="button" value="1" onclick="agregarPantalla('1')">
+            <input class="calcbutton" type="button" value="2" onclick="agregarPantalla('2')">
+            <input class="calcbutton" type="button" value="3" onclick="agregarPantalla('3')">
+            <input class="calcbutton" type="button" value="+" onclick="agregarPantalla('+')">
+            
+            <input class="calcbutton" type="button" value="4" onclick="agregarPantalla('4')">
+            <input class="calcbutton" type="button" value="5" onclick="agregarPantalla('5')">
+            <input class="calcbutton" type="button" value="6" onclick="agregarPantalla('6')">
+            <input class="calcbutton" type="button" value="-" onclick="agregarPantalla('-')">
+            
+            <input class="calcbutton" type="button" value="7" onclick="agregarPantalla('7')">
+            <input class="calcbutton" type="button" value="8" onclick="agregarPantalla('8')">
+            <input class="calcbutton" type="button" value="9" onclick="agregarPantalla('9')">
+            <input class="calcbutton" type="button" value="*" onclick="agregarPantalla('*')">
+            
+            <input class="calcbutton" type="button" value="C" onclick="limpiar()">
+            <input class="calcbutton" type="button" value="0" onclick="agregarPantalla('0')">
+            <input class="calcbutton" type="button" value="=" onclick="calcular()">
+            <input class="calcbutton" type="button" value="/" onclick="agregarPantalla('/')">
+        </div>
+    </div>
+
+    <button onclick="window.location.href = '/Tarea6'">Volver</button>
+</body>
+<script>
+    const agregarPantalla = (cantidad) => {
+        document.getElementById('pantalla').value += cantidad;
+    };
+
+    const limpiar = () => {
+        document.getElementById('pantalla').value = '';
+    };
+
+    const calcular = () => {
+        try {
+            let valor = eval(document.getElementById('pantalla').value);
+            document.getElementById('pantalla').value = valor;
+        } catch (error) {
+            document.getElementById('pantalla').value = 'Ocurrió un error inesperado';
+        }
+    };
+</script>
+</html>
