@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Registros</title>
+</head>
+<body>
+    <h1>Usuarios Registrados</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Deporte</th>
+        </tr>
+        <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td style="background-color: #212121;" ><%= usuario.IdUsuario %></td>
+                <td><%= usuario.Nombre %></td>
+                <td><%= usuario.Apellido %></td>
+                <td><%= usuario.Telefono || 'Ninguno' %></td>
+                <td><%= usuario.Deportes %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <button onclick="window.location.href = '/index';">Volver</button>
+</body>
+</html>

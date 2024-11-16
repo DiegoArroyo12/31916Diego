@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Crear Usuario</title>
+</head>
+<body>
+    <h1>Crear Usuario</h1>
+
+    <form action="/agregar" method="post" class="contenedorFlex">        
+        <input id="nombre" type="text" name="Nombre" placeholder="Nombre" required>        
+        <input id="apellido" type="text" name="Apellido" placeholder="Apellido" required>
+        <input id="telefono" type="text" name="Telefono" placeholder="Teléfono">
+
+        <label for="deporte" style="margin-top: 10px;">Deporte:</label>
+        <select name="IdDeporte" id="deporte">
+            <% deportes.forEach(deporte => { %>
+                <option value="<%= deporte.IdDeporte %>">
+                    <%= deporte.NombreDeporte %>
+                </option>
+            <% }) %>
+        </select>
+
+        <button type="submit">Agregar Usuario</button>
+    </form>
+    <button onclick="window.location.href = '/index';">Volver</button>
+</body>
+</html>

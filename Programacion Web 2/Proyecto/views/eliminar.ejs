@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Eliminar Usuario</title>
+</head>
+<body>
+    <h1>¿Qué registro deseas eliminar?</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Deportes</th>
+            <th>Acción</th>
+        </tr>
+        <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td class="without"><%= usuario.Nombre %></td>
+                <td class="without"><%= usuario.Apellido %></td>
+                <td class="without"><%= usuario.Telefono || 'Ninguno' %></td>
+                <td class="without"><%= usuario.Deportes || 'Ninguno' %></td>
+                <td class="without">
+                    <!-- Formulario para enviar un POST -->
+                    <form action="/eliminar/<%= usuario.IdUsuario %>" method="POST" style="display: inline;">
+                        <button type="submit" class="delete">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <button onclick="window.location.href = '/index';">Volver</button>
+</body>
+</html>

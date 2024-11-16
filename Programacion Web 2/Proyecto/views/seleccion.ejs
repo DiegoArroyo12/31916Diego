@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Seleccion Usuario</title>
+</head>
+<body>
+    <h1>¿Qué registro deseas editar?</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Deportes</th>
+            <th>Acción</th>
+        </tr>
+        <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td class="without"><%= usuario.Nombre %></td>
+                <td class="without"><%= usuario.Apellido %></td>
+                <td class="without"><%= usuario.Telefono || 'Ninguno' %></td>
+                <td class="without"><%= usuario.Deportes || 'Ninguno' %></td>
+                <td class="without">
+                    <button onclick="window.location.href='/editar/<%= usuario.IdUsuario %>';">Editar</button>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <button onclick="window.location.href = '/index';">Volver</button>
+</body>
+</html>

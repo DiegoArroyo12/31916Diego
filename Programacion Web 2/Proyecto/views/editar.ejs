@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Editar Usuario</title>
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="/editar/<%= usuario.IdUsuario %>" method="POST" class="contenedorFlex">
+        <input type="text" name="Nombre" placeholder="Nombre" value="<%= usuario.Nombre %>">
+        <input type="text" name="Apellido" placeholder="Apellido" value="<%= usuario.Apellido %>">
+        <input type="text" name="Telefono" placeholder="Teléfono" value="<%= usuario.Telefono %>">
+        
+        <label for="deporte">Deporte:</label>
+        <select name="IdDeporte" id="deporte">
+            <% 
+                const selectedDeportes = usuario.IdDeportes ? usuario.IdDeportes.split(',') : []; 
+                deportes.forEach(deporte => { 
+            %>
+                <option value="<%= deporte.IdDeporte %>" 
+                    <% if (selectedDeportes.includes(deporte.IdDeporte.toString())) { %> selected <% } %>>
+                    <%= deporte.NombreDeporte %>
+                </option>
+            <% }) %>
+        </select>
+
+        <button type="submit">Actualizar</button>
+    </form>
+    <div class="contenedor">
+        <button onclick="window.location.href='/seleccion';">Editar Otro Registro</button>    
+        <button onclick="window.location.href = '/index';">Volver al Menú Principal</button>
+    </div>
+</body>
+</html>

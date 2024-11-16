@@ -1,0 +1,163 @@
+:root {
+    /* Sección de los colores */
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #474747;
+    --primario: #0a4f80;
+    --secundario: #149b80;
+    --gradiente: linear-gradient(to right, var(--primario), var(--secundario));
+    --transparenteF: rgba(255, 255, 255, 0.3);
+
+    /* Sección de fuentes */
+    --pequeña: 2rem;
+    --principal: 3.5rem;
+    --grande: 6rem;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    color: var(--blanco);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom, var(--negro), var(--primario));
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Contenedores */
+.contenedor {
+    text-align: center;
+    flex-direction: column;
+    font-size: var(--pequeña);
+    border-radius: 4rem;    
+}
+
+.contenedorFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+    font-size: var(--pequeña);
+    border-radius: 4rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.5);
+    background-color: var(--transparenteF);
+}
+
+.titulo {
+    color: var(--blanco);
+}
+
+button {
+    margin: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.2rem;
+    font-size: var(--pequeña);
+    border: 0.3rem solid var(--negro);    
+    border-radius: 4rem;
+    color: var(--blanco);
+    background-image: var(--gradiente);
+}
+
+input {
+    all: unset;
+    color: var(--negro);
+    padding: 2rem;
+    margin: 1rem;
+    border: 0.1rem solid var(--transparenteF);
+    border-radius: 1rem;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: var(--pequeña);
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: var(--negro);
+}
+
+select {
+    color: var(--negro);
+    background-color: var(--transparenteF);
+    width: 28rem;
+    height: 4rem;
+    padding: 0 1rem;       /* Espaciado interno ajustado */
+    margin: 2rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 0.2rem solid var(--negro); /* Borde visible para claridad */
+}
+
+option {
+    color: var(--blanco);
+    padding: 0.5rem 1rem;
+    background-color: var(--gris);
+}
+
+label {
+    font-size: var(--pequeña);
+}
+
+table {
+    margin: 2rem;
+    width: 40rem;
+    font-size: var(--pequeña);
+    color: var(--blanco);
+    border-collapse: collapse;
+    background-color: var(--transparenteF);
+}
+
+th, td {
+    border: 0.1rem solid var(--blanco);
+    padding: 1rem;
+    text-align: center;    
+}
+
+th {
+    background-color: var(--negro);
+}
+
+.without {
+    padding: 0;
+}
+
+.delete {
+    background-color: #ff0707;
+    background-image: none; /* Para eliminar el image de los button default */
+}
